@@ -1,0 +1,133 @@
+/*========================GLOBAL==========================*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%; /*1rem = 10px*/
+
+  /*Colors*/
+  --Tomato: hsl(4, 100%, 67%);
+  --Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --Charcoal-Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+}
+
+@font-face {
+  font-family: Roboto-Bold;
+  src: url("../assets/fonts/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: Roboto-Regular;
+  src: url("../assets/fonts/Roboto-Regular.ttf");
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/*========================WRAPPER==========================*/
+
+#wrapper {
+  width: min(37.5rem, 100%);
+  margin: auto;
+}
+
+/*========================FULL-FORM==========================*/
+
+.full-form {
+  margin: auto;
+  display: grid;
+  grid-template:
+    "A"
+    "B";
+}
+
+.full-form .image {
+  width: 100%;
+  height: 30rem;
+  grid-area: A;
+  border-radius: 0 0 20px 20px;
+  background-image: url("../assets/images/illustration-sign-up-mobile.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+.full-form .content {
+  width: 100%;
+  grid-area: B;
+  padding-inline: 2rem;
+}
+
+.full-form .content h1 {
+  font-size: 4rem;
+  font-family: Roboto-Bold;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.full-form .content p {
+  font-size: 1.8rem;
+  font-family: Roboto-Regular;
+}
+
+.full-form .content ol {
+  margin-top: 3rem;
+  font-size: 1.8rem;
+  font-family: Roboto-Regular;
+  padding-inline: 2.7rem;
+}
+
+.content ol li {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 3rem;
+  list-style: url(../assets/images/icon-list.svg);
+}
+
+/*========================FORM==========================*/
+.form form {
+  padding-inline: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5rem;
+}
+
+.form form p {
+  font-family: Roboto-Bold;
+  font-size: 1.3rem;
+}
+
+.form form span {
+  display: none;
+}
+
+.form form input {
+  height: 6rem;
+  border-radius: 10px;
+  border: 1px rgba(0, 0, 0, 0.445) solid;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1.7rem;
+}
+
+.form form input[type="email"] {
+  padding-left: 2.5rem;
+  border: 1px rgba(0, 0, 0, 0.445) solid;
+  margin-top: 1rem;
+
+}
+
+.form form input[type="submit"] {
+  background-color: var(--Dark-Slate-Grey);
+  color: var(--White);
+  font-family: Roboto-Bold;
+  margin-top: 1rem;
+  text-align: center;
+}
