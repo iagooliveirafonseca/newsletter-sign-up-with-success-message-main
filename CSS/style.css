@@ -30,6 +30,7 @@
 body {
   width: 100%;
   height: 100%;
+  background-color: var(--Dark-Slate-Grey);
 }
 
 /*========================WRAPPER==========================*/
@@ -42,6 +43,7 @@ body {
 /*========================FULL-FORM==========================*/
 
 .full-form {
+  background-color: var(--White);
   margin: auto;
   display: grid;
   grid-template:
@@ -70,6 +72,7 @@ body {
   font-family: Roboto-Bold;
   margin-top: 3rem;
   margin-bottom: 2rem;
+  color: var(--Dark-Slate-Grey);
 }
 
 .full-form .content p {
@@ -88,7 +91,7 @@ body {
   padding-left: 1.5rem;
   margin-bottom: 1rem;
   line-height: 3rem;
-  list-style: url(../assets/images/icon-list.svg);
+  list-style-image: url(../assets/images/icon-list.svg);
 }
 
 /*========================FORM==========================*/
@@ -106,6 +109,10 @@ body {
 
 .form form span {
   display: none;
+  font-family: Roboto-Bold;
+  font-size: 1.3rem;
+  position: absolute;
+  margin-left: 22rem;
 }
 
 .form form input {
@@ -115,13 +122,17 @@ body {
   margin-top: 1rem;
   margin-bottom: 2rem;
   font-size: 1.7rem;
+  cursor: pointer;
 }
 
 .form form input[type="email"] {
   padding-left: 2.5rem;
   border: 1px rgba(0, 0, 0, 0.445) solid;
   margin-top: 1rem;
+}
 
+.email_error::placeholder {
+  color: red;
 }
 
 .form form input[type="submit"] {
@@ -130,4 +141,80 @@ body {
   font-family: Roboto-Bold;
   margin-top: 1rem;
   text-align: center;
+}
+
+.form form input[type="submit"]:hover {
+  background: rgb(255, 80, 134);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 80, 134, 1) 0%,
+    rgba(254, 104, 45, 1) 50%
+  );
+}
+
+
+
+@media (min-width: 1024px) {
+  /*========================body==========================*/
+  body {
+    background-color: var(--Dark-Slate-Grey);
+    height: 90rem;
+    display: flex;
+  }
+
+  /*========================WRAPPER==========================*/
+  #wrapper {
+    width: min(100rem, 100%);
+  }
+
+  /*========================FULL-FORM==========================*/
+  .full-form {
+    background-color: var(--White);
+    padding: 3rem;
+    border-radius: 2rem;
+    grid-template-columns: 1fr 0.75fr;
+    grid-template-areas:
+      "B A"
+      "C A";
+  }
+
+  .full-form .image {
+    height: 100%;
+    border-radius: 2rem;
+    background-image: url("../assets/images/illustration-sign-up-desktop.svg");
+  }
+
+  .full-form .content {
+    width: 90%;
+    grid-area: B;
+    padding-inline: 2rem;
+  }
+
+  .full-form .content h1 {
+    font-size: 6.5rem;
+    font-family: Roboto-Bold;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .form form {
+    width: 90%;
+    grid-area: C;
+    padding-bottom: 6rem;
+  }
+
+  /*========================FORM==========================*/
+
+  .form form p {
+    font-family: Roboto-Bold;
+    font-size: 1.6rem;
+  }
+
+  .form form span {
+    display: none;
+    font-family: Roboto-Bold;
+    font-size: 1.6rem;
+    position: absolute;
+    margin-left: 30rem;
+  }
 }
