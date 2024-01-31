@@ -1,6 +1,5 @@
 
 const email = document.getElementById("email");
-
 const span = document.getElementsByClassName("span-error")[0];
 const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 const form = document.getElementsByTagName("form")[0];
@@ -20,7 +19,7 @@ function redirect_a_page() {
   } else {
     remove_error();
     email.classList.remove = "email_error";
-    window.location.replace("http://127.0.0.1:5500/sucess_form_page.html");
+    window.location.replace("https://iagooliveirafonseca.github.io/newsletter-sign-up-with-success-message-main/sucess_form_page");
   }
 
 }
