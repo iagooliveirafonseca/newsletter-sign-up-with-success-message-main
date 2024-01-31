@@ -19,7 +19,7 @@ function redirect_a_page() {
   } else {
     remove_error();
     email.classList.remove = "email_error";
-    window.location.replace("https://iagooliveirafonseca.github.io/newsletter-sign-up-with-success-message-main/sucess_form_page");
+    window.location.replace("https://iagooliveirafonseca.github.io/newsletter-sign-up-with-success-message-main/sucess_form_page.html");
   }
 
 }
